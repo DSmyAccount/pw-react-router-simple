@@ -1,6 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import AboutUs from "../pages/AboutUs";
-import HomePage from "../pages/Homepage";
+// import HomePage from "../pages/Homepage";
 import MainLayout from "../layouts/MainLayout";
 import Users from "../pages/Users";
 import SingleUser from "../pages/SingleUser";
@@ -10,15 +10,20 @@ import Dashboard from "../pages/Dashboard";
 import AuthenticationLayout from "../layouts/AuthenticationLayout";
 import Login from "../pages/Login";
 import AuthorizationLayout from "../layouts/AuthorizationLayout";
-import DynamicPage from "../pages/DynamicPage";
+// import DynamicPage from "../pages/DynamicPage";
 import ErrorPage from "../pages/ErrorPage";
 //http://localhost:5173/dynamic/homepage
 export const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
-        <Route index element={<HomePage />} />
+        {/* <Route index element={<HomePage />} /> */}
+        <Route index element={<h1>Homepage dummy</h1>} />
+
         <Route path="about" element={<AboutUs />} />
         <Route path="users" element={<Users />} />
-        <Route path="dynamic/:slug" element={<DynamicPage/>}/>
+
+        {/* <Route path="dynamic/:slug" element={<DynamicPage/>}/> */}
+        <Route path="dynamic/:slug" element={<h1>Dynamic page dummy</h1>}/>
+
         <Route path='users/:id' element={<SingleUser />} />
 
         
